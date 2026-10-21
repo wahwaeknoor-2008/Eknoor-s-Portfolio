@@ -1,23 +1,14 @@
-# Eknoor Wadhwa — Premium Portfolio V2
+# Eknoor Wadhwa — Light-first portfolio with theme toggle
 
-A refined, dark editorial portfolio with restrained acid-green accents, strong typography, generous spacing, and a subtle interactive orbital hero.
+The default theme is warm ivory, beige, and botanical green. A button in the top-right lets visitors switch to dark mode; their preference is saved in the browser.
 
-## Files
-- `index.html` — content and accessible structure
-- `styles.css` — responsive visual design and project mockups
-- `script.js` — mobile navigation, scroll reveals, and subtle pointer interaction
+## Publish
+1. Upload `index.html`, `styles.css`, `script.js`, and `README.md` to the root of the intended GitHub Pages repository.
+2. Commit the changes and wait for GitHub Pages to redeploy.
+3. Check the default GitHub Pages URL before connecting the custom domain.
 
-## Publish to GitHub Pages
-1. Upload these four files to the root of your `eknoor-portfolio-v2` repository.
-2. In **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/(root)`.
-3. Add `eknoorwadhwa.com` under **Custom domain**.
-4. Configure the IONOS DNS records as instructed separately. Preserve email-related MX and TXT records.
-5. After DNS is correct and the certificate is ready, enable **Enforce HTTPS**.
-
-## Update before applying
-- Add direct links to each project's own repository/demo when available.
-- Only describe features that have actually been built; current/in-progress labels are intentional.
-- Verify contact details and co-op dates before publishing.
-
-## Security notes
-This is a static site: no login, database, form endpoint, API keys, or third-party JavaScript. A meta Content Security Policy is included as a defense-in-depth measure; GitHub Pages does not let a repository set arbitrary response headers, so this is not a guarantee of being unhackable. Never commit secrets or private credentials.
+## Notes
+- Static-only site, no backend, form endpoint, API keys, or third-party JS.
+- The theme choice is stored in localStorage; if storage is unavailable, the page still works in light mode.
+- Update project links to direct repositories/demos when ready and ensure all project descriptions match the actual implementation.
+- The meta Content Security Policy is defense-in-depth, not a guarantee of being unhackable.
