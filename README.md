@@ -1,17 +1,23 @@
-# Eknoor Wadhwa — Portfolio
+# Eknoor Wadhwa — Premium Portfolio V2
 
-Pastel 3D-inspired, responsive portfolio built with plain HTML, CSS and JavaScript. No build tools or JavaScript libraries required.
+A refined, dark editorial portfolio with restrained acid-green accents, strong typography, generous spacing, and a subtle interactive orbital hero.
 
 ## Files
-- `index.html`: semantic structure, project descriptions and links
-- `styles.css`: responsive styling, CSS 3D effects, animations and reduced-motion support
-- `script.js`: accessible mobile navigation, scroll reveals and pointer parallax
+- `index.html` — content and accessible structure
+- `styles.css` — responsive visual design and project mockups
+- `script.js` — mobile navigation, scroll reveals, and subtle pointer interaction
 
-## Preview
-Open `index.html` in a browser, or run `python3 -m http.server 8000` in this folder and visit `http://localhost:8000`.
+## Publish to GitHub Pages
+1. Upload these four files to the root of your `eknoor-portfolio-v2` repository.
+2. In **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/(root)`.
+3. Add `eknoorwadhwa.com` under **Custom domain**.
+4. Configure the IONOS DNS records as instructed separately. Preserve email-related MX and TXT records.
+5. After DNS is correct and the certificate is ready, enable **Enforce HTTPS**.
 
-## Publish with GitHub Pages
-Push the files to the root of your public repository. In Settings → Pages, choose Deploy from a branch, select `main` and `/(root)`, and save.
+## Update before applying
+- Add direct links to each project's own repository/demo when available.
+- Only describe features that have actually been built; current/in-progress labels are intentional.
+- Verify contact details and co-op dates before publishing.
 
-## Security
-This static site has no login, database, backend, secrets, contact form, or third-party JavaScript dependencies. A restrictive Content Security Policy meta tag blocks external scripts and network connections. GitHub Pages does not let you set arbitrary HTTP response headers, and a meta CSP is only an extra layer, not a guarantee of being unhackable. All public website content is visible to everyone. Never commit API keys, passwords, private phone numbers, or tokens. Replace generic profile links with exact project URLs only after verifying them. For zero third-party font requests, the CSS can use system fonts only.
+## Security notes
+This is a static site: no login, database, form endpoint, API keys, or third-party JavaScript. A meta Content Security Policy is included as a defense-in-depth measure; GitHub Pages does not let a repository set arbitrary response headers, so this is not a guarantee of being unhackable. Never commit secrets or private credentials.
