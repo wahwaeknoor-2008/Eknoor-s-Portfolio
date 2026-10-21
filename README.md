@@ -1,4 +1,4 @@
-# Eknoor Wadhwa —  Portfolio
+# Eknoor Wadhwa — Premium Portfolio V2
 
 A refined, dark editorial portfolio with restrained acid-green accents, strong typography, generous spacing, and a subtle interactive orbital hero.
 
