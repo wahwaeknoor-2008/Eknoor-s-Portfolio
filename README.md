@@ -1,5 +1,8 @@
-# Eknoor Wadhwa — Portrait + pixel transition portfolio
+# Eknoor Wadhwa — centered portrait portfolio
 
-Upload all files in this folder to the root of the intended GitHub Pages repository. This bundle includes the existing bright portfolio, your portrait (`portrait.png`), and a scroll-driven canvas effect: the portrait disperses into square pixels as you scroll down and reforms as you scroll back up. The light theme remains the default; existing theme logic is retained.
+This version centres your portrait and overlays large editorial typography directly across the image, inspired by your reference. As you scroll down, the portrait disperses into coloured square particles; scrolling upward reforms it. Light mode remains the default, with the existing theme switch preserved.
 
-The effect is local and has no external animation dependencies. It respects `prefers-reduced-motion`. Check project details and replace generic GitHub profile links with direct project links before publishing.
+## Publish
+Upload all files in this folder to the root of your existing GitHub Pages repository, replacing the existing versions. Keep `portrait.png`, `index.html`, `style.css`, `script.js`, and `favicon.svg` together. Commit and wait for the Pages deployment, then hard refresh (Mac: Command + Shift + R).
+
+The animation is local canvas code with no third-party animation library and respects reduced-motion preferences. Check project descriptions and replace generic GitHub links with direct repository/demo links when ready.

@@ -39,27 +39,28 @@
   </header>
 
   <main id="top" tabindex="-1">
-    <section class="hero section-pad">
-      <div class="hero-grid wrap">
-        <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="eyebrow-spark">✦</span> Computer Science · University of Waterloo</p>
-          <h1>Ideas with<br><em>real-world</em><br>spark.</h1>
-          <p class="hero-intro">I’m <strong>Eknoor Wadhwa</strong>, a first-year Computer Science student who turns curiosity into things people can actually use—from circuits and NFC products to websites and AI tools.</p>
+    <section class="hero hero-centered section-pad">
+      <div class="centered-hero-wrap wrap">
+        <p class="eyebrow centered-eyebrow"><span class="eyebrow-spark">✦</span> Computer Science · University of Waterloo</p>
+        <div class="hero-visual hero-portrait centered-portrait" id="portrait-stage" aria-label="Portrait of Eknoor Wadhwa with scroll-driven pixel dispersal">
+          <div class="portrait-backdrop" aria-hidden="true"></div>
+          <div class="portrait-frame" id="portrait-frame"><img id="portrait-image" src="portrait.png" alt="Eknoor Wadhwa in a navy suit, white shirt, and blush tie" fetchpriority="high"></div>
+          <canvas id="pixel-canvas" aria-hidden="true"></canvas>
+          <div class="hero-overprint hero-overprint-top" aria-hidden="true">PORTFOLIO</div>
+          <div class="hero-overprint hero-overprint-bottom" aria-hidden="true">SOFTWARE · AI · PRODUCT</div>
+          <div class="portrait-float portrait-code"><span class="mini-dot"></span> BUILD · TEST · IMPROVE</div>
+          <div class="portrait-float portrait-ai"><span>✳</span> AI / SOFTWARE</div>
+          <div class="portrait-caption"><span>EKNOOR WADHWA</span><span>CS · UWATERLOO</span></div>
+          <div class="pixel-hint"><span>↓</span> SCROLL DOWN TO DISPERSE · UP TO REFORM</div>
+        </div>
+        <div class="centered-hero-copy">
+          <h1>Ideas with <em>real-world spark.</em></h1>
+          <p>I’m <strong>Eknoor Wadhwa</strong>, a first-year Computer Science student who turns curiosity into things people can actually use—from circuits and NFC products to websites and AI tools.</p>
           <div class="hero-actions">
             <a class="button button-coral magnetic" href="#flagship"><span>Explore my work</span><b aria-hidden="true">↓</b></a>
             <a class="button button-plain" href="#contact">Say hello <span aria-hidden="true">↗</span></a>
           </div>
           <div class="hero-note"><span class="pulse-dot" aria-hidden="true"></span>Currently building WATpass for Waterloo students</div>
-        </div>
-
-        <div class="hero-visual hero-portrait reveal reveal-delay" id="portrait-stage" aria-label="Portrait of Eknoor Wadhwa with scroll-driven pixel dispersal">
-          <div class="portrait-backdrop" aria-hidden="true"></div>
-          <div class="portrait-frame" id="portrait-frame"><img id="portrait-image" src="portrait.png" alt="Eknoor Wadhwa in a navy suit, white shirt, and blush tie" fetchpriority="high"></div>
-          <canvas id="pixel-canvas" aria-hidden="true"></canvas>
-          <div class="portrait-float portrait-code"><span class="mini-dot"></span> BUILD · TEST · IMPROVE</div>
-          <div class="portrait-float portrait-ai"><span>✳</span> AI / SOFTWARE</div>
-          <div class="portrait-caption"><span>EKNOOR WADHWA</span><span>CS · UWATERLOO</span></div>
-          <div class="pixel-hint"><span>↓</span> SCROLL TO DISPERSE</div>
         </div>
       </div>
       <a class="scroll-prompt" href="#about"><span>Scroll to explore</span><i aria-hidden="true">↓</i></a>

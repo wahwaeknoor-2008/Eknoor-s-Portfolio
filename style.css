@@ -300,3 +300,47 @@ html.motion-ready .reveal.in-view { opacity: 1; transform: translateY(0); }
 @media(max-width:800px){.hero-portrait{min-height:460px;width:100%;margin-top:10px}.portrait-code{left:0}.portrait-ai{right:0}}
 @media(max-width:520px){.hero-portrait{min-height:390px}.portrait-float{font-size:7px;padding:8px 9px}.portrait-code{top:13%}.portrait-ai{top:56%}.portrait-caption{font-size:7px}}
 @media(prefers-reduced-motion:reduce){.portrait-float{animation:none!important}#pixel-canvas{display:none!important}}
+
+
+/* Centered portrait with editorial type layered across the image */
+.hero-centered{display:block;padding-top:34px;padding-bottom:62px;overflow:hidden}
+.centered-hero-wrap{display:flex;flex-direction:column;align-items:center;text-align:center}
+.centered-eyebrow{justify-content:center;margin:0 0 0;position:relative;z-index:8}
+.centered-portrait{width:100%;max-width:1120px;height:min(58vw,650px);min-height:500px;max-height:680px;margin:0 auto;position:relative;display:grid;place-items:center;isolation:isolate;overflow:visible}
+.centered-portrait .portrait-backdrop{position:absolute;left:20%;right:20%;top:8%;bottom:5%;border-radius:50% 50% 3px 3px;background:radial-gradient(ellipse at 50% 45%,#e3ead9 0%,#eef0e7 53%,transparent 76%);border:1px solid #d6deca;z-index:-2}
+.centered-portrait .portrait-frame{position:absolute;inset:0;display:flex;justify-content:center;align-items:flex-end;z-index:3;transition:opacity .08s linear;will-change:opacity,transform}
+.centered-portrait .portrait-frame img{height:100%;width:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 24px 30px #15231a20);position:relative;z-index:3}
+.centered-portrait #pixel-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:5;pointer-events:none;opacity:0;transition:opacity .1s linear}
+.centered-portrait.is-dispersing #pixel-canvas{opacity:1}
+.centered-portrait .portrait-float{z-index:7}
+.hero-overprint{position:absolute;left:0;right:0;z-index:6;pointer-events:none;white-space:nowrap;font-weight:850;line-height:.78;letter-spacing:-.075em;color:#18233d;mix-blend-mode:multiply}
+.hero-overprint-top{top:17%;font-size:clamp(80px,15vw,190px)}
+.hero-overprint-bottom{bottom:13%;font-size:clamp(18px,3vw,34px);letter-spacing:.2em;color:#47683a}
+.centered-portrait .portrait-code{left:7%;top:31%;transform:rotate(-4deg);z-index:8}
+.centered-portrait .portrait-ai{right:7%;top:57%;transform:rotate(4deg);z-index:8}
+.centered-portrait .portrait-caption{left:20%;right:20%;bottom:5%;z-index:8;display:flex;justify-content:space-between;border-top:1px solid #bdc9b4;border-bottom:1px solid #bdc9b4;padding:8px 0;background:#f8f7f0a6}
+.centered-portrait .pixel-hint{left:calc(50% - 145px);bottom:-24px;z-index:8;white-space:nowrap}
+.centered-hero-copy{max-width:690px;margin:27px auto 0;position:relative;z-index:9}
+.centered-hero-copy h1{font-size:clamp(44px,6vw,70px);line-height:1.02;letter-spacing:-.055em;margin:0;font-weight:750}
+.centered-hero-copy h1 em{font-family:Georgia,"Times New Roman",serif;font-weight:400;color:#47683a}
+.centered-hero-copy>p{max-width:600px;margin:17px auto 22px;color:var(--ink-muted,#526078);font-size:15px;line-height:1.8}
+.centered-hero-copy .hero-actions{justify-content:center}
+.centered-hero-copy .hero-note{justify-content:center;margin-top:24px}
+body[data-theme="dark"] .hero-overprint{color:#e8ecdf;mix-blend-mode:screen}
+body[data-theme="dark"] .hero-overprint-bottom{color:#bdd5a9}
+body[data-theme="dark"] .centered-portrait .portrait-backdrop{background:radial-gradient(ellipse,#2a3825 0%,#1c241a 58%,transparent 77%);border-color:#384a32}
+body[data-theme="dark"] .centered-portrait .portrait-caption{background:#101610a6;border-color:#45543e}
+@media(max-width:700px){
+ .hero-centered{padding-top:27px;padding-bottom:52px}
+ .centered-portrait{height:125vw;min-height:430px;max-height:570px}
+ .centered-portrait .portrait-backdrop{left:8%;right:8%;top:10%;bottom:6%}
+ .hero-overprint-top{top:22%;font-size:clamp(55px,17vw,110px)}
+ .hero-overprint-bottom{bottom:15%;font-size:clamp(13px,3.7vw,21px);letter-spacing:.13em}
+ .centered-portrait .portrait-code{left:-1%;top:29%;font-size:8px;padding:9px}
+ .centered-portrait .portrait-ai{right:-1%;top:56%;font-size:8px;padding:9px}
+ .centered-portrait .portrait-caption{left:8%;right:8%;font-size:7px;letter-spacing:.5px}
+ .centered-portrait .pixel-hint{left:calc(50% - 135px);font-size:7px}
+ .centered-hero-copy{margin-top:29px}
+ .centered-hero-copy h1{font-size:clamp(40px,10vw,56px)}
+ .centered-hero-copy>p{font-size:12px}
+}
