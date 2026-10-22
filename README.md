@@ -1,14 +1,5 @@
-# Eknoor Wadhwa — Light-first portfolio with theme toggle
+# Eknoor Wadhwa — Portrait + pixel transition portfolio
 
-The default theme is warm ivory, beige, and botanical green. A button in the top-right lets visitors switch to dark mode; their preference is saved in the browser.
+Upload all files in this folder to the root of the intended GitHub Pages repository. This bundle includes the existing bright portfolio, your portrait (`portrait.png`), and a scroll-driven canvas effect: the portrait disperses into square pixels as you scroll down and reforms as you scroll back up. The light theme remains the default; existing theme logic is retained.
 
-## Publish
-1. Upload `index.html`, `styles.css`, `script.js`, and `README.md` to the root of the intended GitHub Pages repository.
-2. Commit the changes and wait for GitHub Pages to redeploy.
-3. Check the default GitHub Pages URL before connecting the custom domain.
-
-## Notes
-- Static-only site, no backend, form endpoint, API keys, or third-party JS.
-- The theme choice is stored in localStorage; if storage is unavailable, the page still works in light mode.
-- Update project links to direct repositories/demos when ready and ensure all project descriptions match the actual implementation.
-- The meta Content Security Policy is defense-in-depth, not a guarantee of being unhackable.
+The effect is local and has no external animation dependencies. It respects `prefers-reduced-motion`. Check project details and replace generic GitHub profile links with direct project links before publishing.
