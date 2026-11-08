@@ -140,44 +140,29 @@
         <div class="project-list">
           <article class="project-row project-violet resume-project reveal">
             <div class="project-number">01</div>
-            <div class="project-symbol brain-symbol" aria-hidden="true">🧠</div>
+            <div class="project-symbol brain-symbol" aria-hidden="true">R</div>
             <div class="project-info">
               <div class="project-title-line"><h3>Resumind</h3><span class="project-status">Built</span></div>
-              <p>Resumind is a web application that helps users review and improve their resumes by comparing them with a target job description and highlighting relevant feedback.</p>
+              <p>Resumind helps job seekers review their resumes against a target job description and get clear, practical feedback to strengthen their applications.</p>
+              <div class="project-links"><a href="https://resumind-jade-ten.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a><a href="https://github.com/wahwaekno-2008/AI-Resume-Reviewer" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
             </div>
             <div class="project-tags"><span>React</span><span>Python</span><span>FastAPI</span><span>REST API</span></div>
-            <div class="project-links"><a href="https://resumind-jade-ten.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a><a href="https://github.com/wahwaekno-2008/AI-Resume-Reviewer" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
             <div class="project-extra">
               <div class="resume-feature-grid">
                 <div>
-                  <p class="mono-label">Features</p>
+                  <p class="mono-label">What it does</p>
                   <ul>
-                    <li>PDF, DOCX, TXT and Markdown resume upload</li>
-                    <li>Local keyword, structure, action-verb and quantification analysis</li>
-                    <li>Optional AI review for strengths, gaps, keywords, bullet rewrites, project ideas and interview topics</li>
-                    <li>Streamlit web UI</li>
+                    <li>Accepts resume uploads in supported document formats</li>
+                    <li>Reviews resume content against a supplied job description</li>
+                    <li>Highlights keyword matches and missing terms</li>
+                    <li>Provides structured feedback on resume content and presentation</li>
                   </ul>
                 </div>
                 <div>
-                  <p class="mono-label">AI mode</p>
-                  <p>Set <code>OPENAI_API_KEY</code> in your environment before starting the app to enable optional AI review. Never commit API keys to GitHub.</p>
-                  <div class="honesty-note"><strong>Important</strong><br>Displayed scores are heuristic signals—not a real employer ATS score or a prediction of interview success.</div>
+                  <p class="mono-label">Built with</p>
+                  <p>React frontend with a Python FastAPI backend, connected through REST API endpoints.</p>
+                  <div class="honesty-note"><strong>Project note</strong><br>Resumind is a practical resume-feedback tool. Its feedback is intended to support editing—not to guarantee ATS results or interviews.</div>
                 </div>
-              </div>
-              <details class="run-instructions">
-                <summary>Run locally</summary>
-                <pre><code>git clone https://github.com/YOUR-USERNAME/ai-resume-reviewer.git
-cd ai-resume-reviewer
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-streamlit run app.py</code></pre>
-                <p>Replace <code>YOUR-USERNAME</code> with your GitHub username.</p>
-                <pre><code>export OPENAI_API_KEY="your_api_key_here"</code></pre>
-              </details>
-              <div class="resume-roadmap">
-                <p class="mono-label">Portfolio roadmap</p>
-                <div class="resume-roadmap-tags"><span>PDF report export</span><span>Visual keyword highlighting</span><span>Resume version comparison</span><span>Job history</span><span>GitHub/project recommendations</span><span>Tests</span><span>Deployment</span></div>
               </div>
             </div>
           </article>

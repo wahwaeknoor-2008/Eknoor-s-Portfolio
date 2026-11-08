@@ -344,3 +344,10 @@ body[data-theme="dark"] .centered-portrait .portrait-caption{background:#101610a
  .centered-hero-copy h1{font-size:clamp(40px,10vw,56px)}
  .centered-hero-copy>p{font-size:12px}
 }
+
+/* Resumind project card layout refinement */
+.project-links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 16px; }
+.project-links a { display: inline-flex; align-items: center; justify-content: center; min-height: 36px; padding: 8px 13px; border: 1.5px solid var(--ink); border-radius: 999px; background: rgba(255,255,255,.58); color: var(--ink); font-family: var(--mono); font-size: .68rem; font-weight: 700; text-decoration: none; transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+.project-links a:hover { transform: translateY(-2px); background: var(--yellow); box-shadow: 3px 3px 0 var(--ink); }
+.project-violet .project-symbol { display: grid; place-items: center; font-family: var(--display); font-size: 2.1rem; font-weight: 800; }
+@media (max-width: 760px) { .project-links { grid-column: 1 / -1; } }
