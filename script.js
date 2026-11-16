@@ -8,6 +8,61 @@
   const progressBar = document.querySelector('#progress-bar');
   const navLinks = [...document.querySelectorAll('.site-nav a')];
 
+  // Animated circular wipe theme switch. The old theme briefly covers the
+  // page, the theme changes underneath, then the wipe reveals the new theme.
+  const themeToggle = document.querySelector('#theme-toggle');
+  const themeIcon = themeToggle?.querySelector('.theme-toggle-icon');
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+  function applyTheme(theme) {
+    document.body.dataset.theme = theme;
+    const dark = theme === 'dark';
+    themeToggle?.setAttribute('aria-pressed', String(dark));
+    themeToggle?.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    if (themeToggle) themeToggle.title = dark ? 'Switch to light mode' : 'Switch to dark mode';
+    if (themeIcon) themeIcon.textContent = dark ? '☀' : '☾';
+    if (themeMeta) themeMeta.setAttribute('content', dark ? '#111722' : '#fff5d9');
+  }
+
+  const savedTheme = localStorage.getItem('eknoor-theme');
+  if (savedTheme === 'dark' || savedTheme === 'light') applyTheme(savedTheme);
+
+  themeToggle?.addEventListener('click', async () => {
+    const nextTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+    const oldThemeColor = document.body.dataset.theme === 'dark' ? '#111722' : '#fffdf7';
+    const rect = themeToggle.getBoundingClientRect();
+    const x = rect.left + rect.width / 2;
+    const y = rect.top + rect.height / 2;
+    const radius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+    const wipe = document.createElement('div');
+    wipe.className = 'theme-wipe';
+    wipe.style.setProperty('--wipe-color', oldThemeColor);
+    wipe.style.setProperty('--wipe-x', `${x}px`);
+    wipe.style.setProperty('--wipe-y', `${y}px`);
+    document.body.appendChild(wipe);
+
+    if (motionQuery.matches || !wipe.animate) {
+      applyTheme(nextTheme);
+      localStorage.setItem('eknoor-theme', nextTheme);
+      wipe.remove();
+      return;
+    }
+
+    const expand = wipe.animate(
+      [{ clipPath: `circle(0 at ${x}px ${y}px)` }, { clipPath: `circle(${radius}px at ${x}px ${y}px)` }],
+      { duration: 520, easing: 'cubic-bezier(.7,0,.2,1)', fill: 'forwards' }
+    );
+    await expand.finished;
+    applyTheme(nextTheme);
+    localStorage.setItem('eknoor-theme', nextTheme);
+    const reveal = wipe.animate(
+      [{ clipPath: `circle(${radius}px at ${x}px ${y}px)` }, { clipPath: `circle(0 at ${x}px ${y}px)` }],
+      { duration: 560, easing: 'cubic-bezier(.7,0,.2,1)', fill: 'forwards' }
+    );
+    await reveal.finished;
+    wipe.remove();
+  });
+
   function closeMenu() {
     nav.classList.remove('open');
     menuButton.setAttribute('aria-expanded', 'false');
