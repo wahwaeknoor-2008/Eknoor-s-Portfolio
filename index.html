@@ -63,6 +63,8 @@
           <div class="hero-actions">
             <a class="button button-coral magnetic" href="#flagship"><span>Explore my work</span><b aria-hidden="true">↓</b></a>
             <a class="button button-plain" href="#contact">Say hello <span aria-hidden="true">↗</span></a>
+            <a class="button button-resume" href="Eknoor-Wadhwa-Resume.pdf" target="_blank" rel="noopener noreferrer">Open résumé <span aria-hidden="true">↗</span></a>
+            <a class="button button-plain" href="Eknoor-Wadhwa-Resume.pdf" download="Eknoor-Wadhwa-Resume.pdf">Download PDF <span aria-hidden="true">↓</span></a>
           </div>
           <div class="hero-note"><span class="pulse-dot" aria-hidden="true"></span>Currently building WATpass for Waterloo students</div>
         </div>
@@ -200,6 +202,7 @@
               <div class="project-links">
                 <a href="https://github.com/wahwaeknoor-2008/Butt-Bounce" target="_blank" rel="noopener noreferrer">Open-source code ↗</a>
                 <a href="https://spidervraj.itch.io/butt-bounce-rooftop-rush" target="_blank" rel="noopener noreferrer">Play on itch.io ↗</a>
+                <a class="certificate-link" href="haven-guelph-third-place-certificate.jpeg" target="_blank" rel="noopener noreferrer">Show certificate ↗</a>
               </div>
             </div>
             <div class="project-tags"><span>Godot</span><span>Game Development</span><span>GitHub</span><span>Teamwork</span><span>Game Jam</span></div>
@@ -224,14 +227,36 @@
     <section id="contact" class="contact-section section-pad">
       <div class="wrap contact-card reveal">
         <div class="contact-flare flare-one" aria-hidden="true"></div><div class="contact-flare flare-two" aria-hidden="true"></div>
-        <p class="eyebrow eyebrow-light"><span class="eyebrow-spark">06</span> Contact</p>
-        <h2>Let’s build<br>something useful.</h2>
-        <p class="contact-intro">Always up for talking about AI, hardware, or co-op opportunities.</p>
-        <div class="contact-links">
-          <a href="mailto:e4wadhwa@uwaterloo.ca"><span class="contact-key">EMAIL</span><span>e4wadhwa@uwaterloo.ca</span><b aria-hidden="true">↗</b></a>
-          <a href="https://linkedin.com/in/eknoor-wadhwa-a18661363" target="_blank" rel="noopener noreferrer"><span class="contact-key">LINKEDIN</span><span>eknoor-wadhwa</span><b aria-hidden="true">↗</b></a>
-          <a href="https://github.com/wahwaeknoor-2008" target="_blank" rel="noopener noreferrer"><span class="contact-key">GITHUB</span><span>wahwaeknoor-2008</span><b aria-hidden="true">↗</b></a>
-          <a href="tel:5489944706"><span class="contact-key">PHONE</span><span>548-994-4706</span><b aria-hidden="true">↗</b></a>
+        <div class="contact-layout">
+          <div class="contact-details">
+            <p class="eyebrow eyebrow-light"><span class="eyebrow-spark">06</span> Contact</p>
+            <h2>Let’s build<br>something useful.</h2>
+            <p class="contact-intro">Have a question, an idea, or want to talk about AI, hardware, or co-op opportunities? Send me a message.</p>
+            <div class="contact-links">
+              <a href="mailto:e4wadhwa@uwaterloo.ca"><span class="contact-key">EMAIL</span><span>e4wadhwa@uwaterloo.ca</span><b aria-hidden="true">↗</b></a>
+              <a href="https://linkedin.com/in/eknoor-wadhwa-a18661363" target="_blank" rel="noopener noreferrer"><span class="contact-key">LINKEDIN</span><span>eknoor-wadhwa</span><b aria-hidden="true">↗</b></a>
+              <a href="https://github.com/wahwaeknoor-2008" target="_blank" rel="noopener noreferrer"><span class="contact-key">GITHUB</span><span>wahwaeknoor-2008</span><b aria-hidden="true">↗</b></a>
+              <a href="tel:5489944706"><span class="contact-key">PHONE</span><span>548-994-4706</span><b aria-hidden="true">↗</b></a>
+            </div>
+          </div>
+          <form class="contact-form" action="https://formsubmit.co/e4wadhwa@uwaterloo.ca" method="POST">
+            <input type="hidden" name="_subject" value="New portfolio message — Eknoor Wadhwa">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://eknoorwadhwa.com/#contact">
+            <div class="form-heading">
+              <h3>Send me a message</h3>
+              <p>I’ll get back to you as soon as I can.</p>
+            </div>
+            <label for="contact-name">Name</label>
+            <input id="contact-name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+            <label for="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="5" placeholder="What would you like to talk about?" required></textarea>
+            <button class="contact-submit" type="submit">Send message <span aria-hidden="true">↗</span></button>
+            <p class="form-note">Your message will be sent to my University of Waterloo email.</p>
+          </form>
         </div>
       </div>
     </section>
