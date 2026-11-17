@@ -602,3 +602,13 @@ body[data-theme="dark"] .github-snake { background: #0d1420; }
   .github-shortcuts a:last-child { border-bottom: 0; }
   .github-profile-link { margin-left: 58px; }
 }
+
+
+/* Hero spacing: keep the academic eyebrow visible below the fixed navigation */
+.hero-centered { padding-top: 112px; }
+.centered-eyebrow { margin-bottom: 10px; }
+.form-optional { color: #7b879a; font-size: .72rem; font-weight: 500; }
+@media (max-width: 700px) {
+  .hero-centered { padding-top: 96px; }
+  .centered-eyebrow { margin-bottom: 8px; font-size: .61rem; }
+}
