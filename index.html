@@ -46,12 +46,12 @@
   <main id="top" tabindex="-1">
     <section class="hero hero-centered section-pad">
       <div class="centered-hero-wrap wrap">
-        <p class="eyebrow centered-eyebrow"><span class="eyebrow-spark">✦</span> Computer Science · University of Waterloo</p>
+        <p class="eyebrow centered-eyebrow"><span class="eyebrow-spark">✦</span> COMPUTER SCIENCE · UNIVERSITY OF WATERLOO</p>
         <div class="hero-visual hero-portrait centered-portrait" id="portrait-stage" aria-label="Portrait of Eknoor Wadhwa with scroll-driven pixel dispersal">
           <div class="portrait-backdrop" aria-hidden="true"></div>
           <div class="portrait-frame" id="portrait-frame"><img id="portrait-image" src="portrait.png" alt="Eknoor Wadhwa in a navy suit, white shirt, and blush tie" fetchpriority="high"></div>
           <canvas id="pixel-canvas" aria-hidden="true"></canvas>
-          <div class="hero-overprint hero-overprint-top" aria-hidden="true">PORTFOLIO</div>
+          <div class="hero-overprint hero-overprint-top" aria-hidden="true">BUILDER</div>
           <div class="hero-overprint hero-overprint-bottom" aria-hidden="true">SOFTWARE · AI · PRODUCT</div>
           <div class="portrait-float portrait-code"><span class="mini-dot"></span> BUILD · TEST · IMPROVE</div>
           <div class="portrait-float portrait-ai"><span>✳</span> AI / SOFTWARE</div>
@@ -273,16 +273,18 @@
             <input type="hidden" name="_subject" value="New portfolio message — Eknoor Wadhwa">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://eknoorwadhwa.com/#contact">
+            <input type="hidden" name="_next" value="https://eknoorwadhwa.com/thank-you.html">
             <div class="form-heading">
               <h3>Send me a message</h3>
               <p>I’ll get back to you as soon as I can.</p>
             </div>
             <label for="contact-name">Name</label>
             <input id="contact-name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
-            <label for="contact-email">Email</label>
-            <input id="contact-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
-            <label for="contact-message">Message</label>
+            <label for="contact-phone">Phone number</label>
+            <input id="contact-phone" name="phone" type="tel" placeholder="+1 555 123 4567" autocomplete="tel" required>
+            <label for="contact-email">Email <span class="form-optional">(optional)</span></label>
+            <input id="contact-email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+            <label for="contact-message">Comments / message</label>
             <textarea id="contact-message" name="message" rows="5" placeholder="What would you like to talk about?" required></textarea>
             <button class="contact-submit" type="submit">Send message <span aria-hidden="true">↗</span></button>
             <p class="form-note">Your message will be sent to my University of Waterloo email.</p>
