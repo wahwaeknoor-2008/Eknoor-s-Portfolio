@@ -2,6 +2,14 @@
 
 Personal portfolio for eknoorwadhwa.com. Plain HTML, CSS and JavaScript. No build step and no frameworks.
 
+## Design
+
+A dark, numbered-section layout: Introduction, Journey, Selected work, Method, Profile, Record and Contact. Light mode is available from the toggle in the header, and your choice is remembered on that device.
+
+- **Selected work:** pick a project on the left to read it on the right. Arrow keys also move between projects.
+- **Search:** press Ctrl K (Cmd K on a Mac) to jump to any section, project or link.
+- **Contact:** copy the email with one click, or send a message with the form.
+
 ## Files
 
 | File | Purpose |
@@ -11,7 +19,7 @@ Personal portfolio for eknoorwadhwa.com. Plain HTML, CSS and JavaScript. No buil
 | `terms.html` | Terms & Conditions |
 | `thank-you.html` | Shown after the contact form is sent (not indexed) |
 | `style.css` | The only stylesheet |
-| `script.js`, `theme-init.js` | Theme switch, mobile menu, current-section highlight |
+| `script.js`, `theme-init.js` | Theme switch, project tabs, search palette, copy email, mobile menu |
 | `favicon.svg`, `favicon.ico`, `apple-touch-icon.png` | Favicons |
 | `CNAME` | Custom domain: eknoorwadhwa.com |
 | `robots.txt`, `sitemap.xml` | Search engine files for the custom domain |
@@ -41,7 +49,6 @@ The form sends through FormSubmit to e4wadhwa@uwaterloo.ca. The first submission
 
 - Check that every number on the page is true: 5+ websites, 15+ NFC cards, 1,000+ museum visitors, 3× portfolio growth, 500+ volunteer hours, 95%+ admission average.
 - `Eknoor-Wadhwa-Resume.pdf` is your final résumé (Eknoor_Resume_Final.pdf). Its GitHub line currently reads `https://github.com/repos`, which is not your profile. Fix it to `https://github.com/wahwaeknoor-2008` in Canva, export again and replace the file under the same name.
-- The résumé lists two certifications (Google Introduction to AI and Google AI Fundamentals). The Achievements section still shows four. Remove any you do not want public.
-- The featured AI study assistant is not on the résumé. Confirm it is finished before keeping the "Completed" label.
+- The résumé lists two certifications (Google Introduction to AI and Google AI Fundamentals). The Record section still shows four. Remove any you do not want public.
+- The AI study assistant is not on the résumé and has no link. Confirm it is finished before keeping the "Completed" label.
 - Read `privacy.html` and `terms.html`. They describe what this site actually does today. Update them if you add analytics, new third-party services or a different contact method. The terms name Ontario law, so confirm that is what you want.
-- The featured AI study assistant has no live or GitHub link. Add one when you have it.
