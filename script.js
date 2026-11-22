@@ -1,5 +1,4 @@
-// Small, calm interactions: theme, project tabs, search palette, copy email, mobile menu.
-// No scroll-driven animation, no cursor effects, no counters.
+// Theme, project tabs, search palette, copy email, mobile menu and scroll progress.
 (() => {
   'use strict';
   const root = document.documentElement;
@@ -107,7 +106,7 @@
   const dialog = $('#palette');
   const openBtn = $('#palette-open');
   const kbd = $('#palette-kbd');
-  if (kbd && /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent)) kbd.textContent = 'Cmd K';
+  if (kbd && /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent)) kbd.textContent = '⌘K';
   if (dialog && typeof dialog.showModal === 'function') {
     const input = $('#palette-input');
     const list = $('#palette-list');
@@ -141,6 +140,12 @@
       if (!target) return;
       dialog.close();
       if (target.dataset.action === 'theme') { toggleTheme(); return; }
+      if (target.dataset.focus === 'ask') {
+        $('#map').scrollIntoView();
+        history.replaceState(null, '', '#map');
+        setTimeout(() => { const f = $('#ask-input'); if (f) f.focus(); }, 60);
+        return;
+      }
       if (target.dataset.project) {
         selectProject(target.dataset.project, false);
         $('#work').scrollIntoView();
@@ -163,11 +168,30 @@
       const t = $('a, button', li);
       if (t && t.dataset.project) { e.preventDefault(); }
       if (t && t.tagName === 'A' && !t.dataset.project && t.getAttribute('href').startsWith('#')) { dialog.close(); return; }
-      if (t && (t.dataset.project || t.dataset.action)) { e.preventDefault(); run(li); return; }
+      if (t && (t.dataset.project || t.dataset.action || t.dataset.focus)) { e.preventDefault(); run(li); return; }
       dialog.close();
     }));
     dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
   } else if (openBtn) {
     openBtn.hidden = true;
   }
+})();
+
+// Scroll progress read-out, bottom right.
+(() => {
+  const n = document.getElementById('progress-n');
+  const bar = document.getElementById('progress-bar');
+  if (!n || !bar) return;
+  let queued = false;
+  const update = () => {
+    const el = document.documentElement;
+    const max = el.scrollHeight - el.clientHeight;
+    const pct = max > 0 ? Math.min(100, Math.max(0, Math.round((el.scrollTop / max) * 100))) : 0;
+    n.textContent = pct + '%';
+    bar.style.width = pct + '%';
+    queued = false;
+  };
+  window.addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(update); } }, { passive: true });
+  window.addEventListener('resize', update);
+  update();
 })();
