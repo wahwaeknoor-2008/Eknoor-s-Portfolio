@@ -4,7 +4,7 @@ Personal portfolio for eknoorwadhwa.com. Plain HTML, CSS and JavaScript. No buil
 
 ## Design
 
-A dark, numbered-section layout: Introduction, Journey, The map, Selected work, Method, Profile, GitHub, Record and Contact. Light mode is available from the toggle in the header, and your choice is remembered on that device.
+A "terminal notebook" theme: DM Mono throughout, a dotted grid background, dashed frames and a lime accent, laid out as numbered sections (Introduction, Journey, The map, Selected work, Method, Profile, GitHub, Record and Contact). It opens dark. Light mode is available from the toggle in the header, and your choice is remembered on that device.
 
 - **The map:** every project, role and skill on the page is plotted by topic. Ask a question or tap a suggestion and the closest matches light up. It runs in the browser on the page's own text and sends nothing anywhere.
 - **Selected work:** pick a project on the left to read it on the right, with a small flow diagram where one applies. Each project also has its own page under `projects/`.

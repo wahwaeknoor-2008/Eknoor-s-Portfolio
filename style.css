@@ -1,12 +1,12 @@
-/* Eknoor Wadhwa portfolio. One stylesheet, dark by default. */
+/* Eknoor Wadhwa portfolio. Terminal notebook theme: monospace, dotted grid, dashed frames. Dark by default. */
 :root {
   --bg: #1c1b1d; --surface: #242325; --surface-2: #2d2c2f;
   --text: #f1eee5; --muted: #a9a698; --faint: #77756a;
   --line: rgba(241, 238, 229, .13); --line-strong: rgba(241, 238, 229, .28);
-  --accent: #f2b200; --accent-fill: #f2b200; --accent-ink: #161615;
+  --accent: #b6e36b; --accent-fill: #b6e36b; --accent-ink: #161615; --dot: rgba(241, 238, 229, .075);
   --portrait-bg: #e9e4d2; --header-bg: rgba(28, 27, 29, .88);
-  --display: 'Space Grotesk', system-ui, sans-serif;
-  --body: 'DM Sans', system-ui, sans-serif;
+  --display: 'DM Mono', ui-monospace, 'DejaVu Sans Mono', monospace;
+  --body: 'DM Mono', ui-monospace, 'DejaVu Sans Mono', monospace;
   --mono: 'DM Mono', ui-monospace, monospace;
   --max: 1240px; --pad: clamp(20px, 4vw, 48px);
   color-scheme: dark;
@@ -15,7 +15,7 @@
   --bg: #f6f3ea; --surface: #fffdf7; --surface-2: #ece7d8;
   --text: #17181a; --muted: #555a63; --faint: #858890;
   --line: rgba(23, 24, 26, .14); --line-strong: rgba(23, 24, 26, .34);
-  --accent: #8a5f00; --accent-fill: #f2b200; --accent-ink: #17181a;
+  --accent: #3f6b0f; --accent-fill: #a4d44f; --accent-ink: #17181a; --dot: rgba(23, 24, 26, .09);
   --portrait-bg: #fff1c2; --header-bg: rgba(246, 243, 234, .9);
   color-scheme: light;
 }
@@ -294,8 +294,8 @@ h2 { font-size: clamp(2.2rem, 5vw, 4rem); }
 .map-loading { position: absolute; inset: 0; display: grid; place-items: center; color: var(--faint); font: 400 .8rem var(--mono); }
 .pt { position: absolute; width: 16px; height: 16px; margin: -8px 0 0 -8px; padding: 0; border: 2px solid var(--muted); border-radius: 50%; background: var(--bg); cursor: pointer; }
 .pt.proj { border-color: var(--accent-fill); background: var(--accent-fill); }
-.pt.near { box-shadow: 0 0 0 4px rgba(242, 178, 0, .22); }
-.pt.hit { box-shadow: 0 0 0 5px rgba(242, 178, 0, .5); }
+.pt.near { box-shadow: 0 0 0 4px rgba(182, 227, 107, .24); }
+.pt.hit { box-shadow: 0 0 0 5px rgba(182, 227, 107, .5); }
 .pt.sel { outline: 2px solid var(--text); outline-offset: 3px; z-index: 3; }
 .pt:hover, .pt:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; z-index: 3; }
 .pt.sel::after, .pt.near::after, .pt.hit::after, .pt:hover::after, .pt:focus-visible::after { content: attr(data-label); position: absolute; top: 50%; left: 22px; transform: translateY(-50%); padding: 2px 8px; border: 1px solid var(--line-strong); border-radius: 4px; background: var(--surface-2); color: var(--text); font: 500 .68rem var(--mono); white-space: nowrap; pointer-events: none; }
@@ -375,3 +375,36 @@ h2 { font-size: clamp(2.2rem, 5vw, 4rem); }
   .progress i { display: none; }
   .map-card { padding: 12px; }
 }
+
+
+/* ---------- terminal notebook ---------- */
+body { font-size: 15px; background-image: radial-gradient(var(--dot) 1px, transparent 1.2px); background-size: 26px 26px; }
+h1, h2, h3, h4, .brand, .wl-t strong, .md-title, .ask-title, .contact-title { font-weight: 500; letter-spacing: -.05em; text-transform: lowercase; }
+.brand { letter-spacing: -.03em; }
+.facts b, .awards strong, .ask-hit strong, .email, .role h4 { font-weight: 500; letter-spacing: -.05em; }
+.hero h1 { font-size: clamp(3.4rem, 12vw, 10.5rem); line-height: .9; letter-spacing: -.06em; }
+.hero h1 span:last-child::after { content: '_'; color: var(--accent-fill); }
+h2 { font-size: clamp(2rem, 4.6vw, 3.8rem); }
+.contact-title { font-size: clamp(2.4rem, 8.4vw, 7rem); line-height: .95; letter-spacing: -.06em; }
+.lead { font-size: 1.1rem; font-weight: 400; line-height: 1.55; letter-spacing: -.01em; }
+.legal h1, .legal h2, .legal h3, .proj-page .proj-sum { text-transform: none; letter-spacing: -.03em; }
+.proj-page h1 { text-transform: lowercase; }
+.sec-label { border-top: 1px dashed var(--line-strong); }
+.sec-label span:first-child::before { content: '// '; color: var(--accent-fill); }
+.hero-foot { border-top-style: dashed; }
+.panel, .map-card, .gh, .contact-form, .flow, .thanks { border: 1px dashed var(--line-strong); border-radius: 0; background: transparent; }
+.panel-note, .portrait img { border-radius: 0; }
+.work-list { border-top: 1px dashed var(--line-strong); }
+.wl { border-left: 0; border-bottom: 1px dashed var(--line); }
+.wl:hover { background: transparent; color: var(--text); }
+.wl[aria-selected="true"] { background: transparent; border-left: 0; color: var(--accent); }
+.wl[aria-selected="true"] .wl-t strong::before { content: '> '; }
+.btn, .chip, .bar-link, .palette-trigger, .icon-btn, .menu-button, .tech li, .md-near button, .kbd-inline, .ask-form input, .contact-form input:not([type="hidden"]), .contact-form textarea, .palette, .flow-n { border-radius: 0; }
+.facts li + li { border-left-style: dashed; }
+.meta-list, .contact-list, .links { border-top-style: dashed; }
+.meta-list div, .contact-list div, .tk h3, .tk li, .awards li, .role, .col-title { border-bottom-style: dashed; }
+.palette-list li.active > a, .palette-list li.active > button { box-shadow: inset 2px 0 0 var(--accent-fill); }
+.gh-snake { border-radius: 0; }
+.text-link, .panel-meta, .md-kind, .aw-when, .step-n, .gh-n, .copy-status, .eyebrow { color: var(--accent); }
+.legal a, .form-note a { color: var(--accent); }
+.mark { border-radius: 0; }
