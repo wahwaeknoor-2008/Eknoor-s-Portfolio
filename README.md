@@ -43,8 +43,8 @@ The form sends through FormSubmit to e4wadhwa@uwaterloo.ca. The first submission
 
 ## Before you publish
 
-- Check that every number on the page is true: 5+ websites, 15+ NFC cards, 1,000+ museum visitors, 3× portfolio growth, 500+ volunteer hours, 95%+ admission average.
-- `Eknoor-Wadhwa-Resume.pdf` is your final résumé (Eknoor_Resume_Final.pdf). Its GitHub line currently reads `https://github.com/repos`, which is not your profile. Fix it to `https://github.com/wahwaeknoor-2008` in Canva, export again and replace the file under the same name.
-- The résumé lists two certifications (Google Introduction to AI and Google AI Fundamentals). The Record section still shows four. Remove any you do not want public.
+- Check that every number on the page is true: 5+ websites, 15+ NFC cards, 1,000+ museum visitors, 500+ volunteer hours, 95%+ admission average.
+- `Eknoor-Wadhwa-Resume.pdf` is your latest résumé (Eknoor_Wadhwa_Resume_Final). Replace it under the same name whenever you update the résumé.
 - The AI study assistant is not on the résumé and has no link. Confirm it is finished before keeping the "Completed" label.
 - Read `privacy.html` and `terms.html`. They describe what this site actually does today. Update them if you add analytics, new third-party services or a different contact method. The terms name Ontario law, so confirm that is what you want.
+- The University of Waterloo logo (`uw-logo.png`) is shown unaltered on a white plate. Keep it that way.

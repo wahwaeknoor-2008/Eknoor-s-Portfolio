@@ -408,3 +408,13 @@ h2 { font-size: clamp(2rem, 4.6vw, 3.8rem); }
 .text-link, .panel-meta, .md-kind, .aw-when, .step-n, .gh-n, .copy-status, .eyebrow { color: var(--accent); }
 .legal a, .form-note a { color: var(--accent); }
 .mark { border-radius: 0; }
+
+/* university logo */
+.hero-foot { align-items: flex-end; }
+.hero-left { display: grid; gap: 18px; }
+.uw-logo { display: block; padding: 12px 18px; border: 1px solid var(--line-strong); background: #fff; }
+.uw-logo img { display: block; width: auto; height: 46px; }
+.uw-logo:hover { border-color: var(--accent-fill); }
+.uw-logo-sm { display: inline-block; margin-bottom: 16px; padding: 8px 12px; }
+.uw-logo-sm img { height: 30px; }
+@media (max-width: 640px) { .hero-foot { align-items: flex-start; } }
